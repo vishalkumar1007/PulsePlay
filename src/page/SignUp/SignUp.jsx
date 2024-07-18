@@ -7,7 +7,7 @@ const SignUp = ()=>{
         <SafeAreaView style={signUpStyles.main}>
             <View>
                 <Text>
-                    This is SignUp page wireless
+                    We are done with initialized project on github
                 </Text>
             </View>
         </SafeAreaView>
