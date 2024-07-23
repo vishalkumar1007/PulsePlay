@@ -14,6 +14,9 @@ import {
 } from 'react-native';
 import React from 'react';
 import LOGO from '../../assets/PulsePlayLogo.png';
+import GOOGLE_LOGO from '../../assets/googleLogo.png'
+import FACEBOOK_LOGO from '../../assets/FacebookLogo.png'
+import X_LOGO from '../../assets/XLogo.png'
 import { PasswordLookSvg  , PasswordHideSvg} from '../../component/SvgIcon';
 
 const SignUp = () => {
@@ -42,7 +45,7 @@ const SignUp = () => {
       <View
         style={[
           signUpStyles.signUpMain,
-          {width: WIDTH * 0.85, height: HEIGHT * 0.9},
+          {width: WIDTH * 0.85, height: HEIGHT * 0.93},
         ]}>
         <View
           style={[
@@ -171,7 +174,7 @@ const SignUp = () => {
           <View
             style={[
               signUpStyles.btnDiv,
-              {width: WIDTH * 0.8, height: HEIGHT * 0.08},
+              {width: WIDTH * 0.8, height: HEIGHT * 0.07},
             ]}>
             <TouchableOpacity style={[signUpStyles.touchBtn, {}]}>
               <View style={[signUpStyles.btn]}>
@@ -183,28 +186,30 @@ const SignUp = () => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={[signUpStyles.OrWith, {height: HEIGHT * 0.125}]}>
+        <View style={[signUpStyles.OrWith, {height: HEIGHT * 0.115}]}>
           <View style={[signUpStyles.orLine]}>
             <View style={[signUpStyles.orLineLeft]}></View>
             <Text style={[signUpStyles.orLineText]}>or</Text>
             <View style={[signUpStyles.orLineRight]}></View>
           </View>
-          <View style={[signUpStyles.otherOptionLogin]}></View>
+          <View style={[signUpStyles.otherOptionLogin]}>
+            <TouchableOpacity style={[signUpStyles.withGoogle , {width:HEIGHT*0.05 , height:HEIGHT*0.05}]}>
+              <Image style={signUpStyles.withLogo} source={GOOGLE_LOGO}/>
+            </TouchableOpacity>
+            <TouchableOpacity style={[signUpStyles.withFacebook , {width:HEIGHT*0.05 , height:HEIGHT*0.05}]}>
+              <Image style={signUpStyles.withLogo} source={FACEBOOK_LOGO}/>
+            </TouchableOpacity>
+            <TouchableOpacity style={[signUpStyles.withLinkedIn , {width:HEIGHT*0.05 , height:HEIGHT*0.05}]}>
+              <Image style={signUpStyles.withLogo} source={X_LOGO}/>
+            </TouchableOpacity>
+          </View>
         </View>
-        <View style={signUpStyles.haveAccount}>
-          <Text style={{color:'#1c1c1d' , fontWeight:`500`}}>Already have an account ? </Text>
-          <TouchableOpacity><Text style={{color:'purple' , fontWeight:`500`}}>Login</Text></TouchableOpacity>
+        <View style={[signUpStyles.haveAccount , {paddingTop:HEIGHT*0.018}]}>
+          <Text style={{color:'#717171' , fontWeight:`500` , fontSize:HEIGHT*0.013}}>Already have an account ? </Text>
+          <TouchableOpacity><Text style={{color:'purple' , fontWeight:`500` , fontSize:HEIGHT*0.013}}>Login</Text></TouchableOpacity>
         </View>
       </View>
-      {/* </ScrollView> */}
-      {/* </KeyboardAvoidingView> */}
     </SafeAreaView>
-
-    // <SafeAreaView style={{backgroundColor:'red',width:WIDTH,height:HEIGHT , display:'flex',justifyContent:'center',alignItems:'center'}}>
-    //   <View style={{backgroundColor:'green',width:WIDTH*0.7,height:HEIGHT*0.8}}>
-
-    //   </View>
-    // </SafeAreaView>
   );
 };
 
@@ -313,12 +318,13 @@ export const signUpStyles = StyleSheet.create({
     alignItems: 'center',
   },
   touchBtn: {
-    marginTop: 10,
+    marginTop: 5,
     backgroundColor: 'purple',
     width: '100%',
     minHeight: 35,
-    height: '52%',
+    height: '57%',
     borderRadius: 7,
+    // elevation:4
   },
   btn: {
     width: '100%',
@@ -333,9 +339,12 @@ export const signUpStyles = StyleSheet.create({
     fontWeight: '500',
   },
   OrWith: {
-    backgroundColor: 'green',
+    // backgroundColor: 'green',
     width: '100%',
     // height: '16%'
+    display:'flex',
+    justifyContent:'space-around',
+    alignItems:'center'
   },
   orLine: {
     // backgroundColor:'red',
@@ -363,9 +372,12 @@ export const signUpStyles = StyleSheet.create({
   },
 
   otherOptionLogin: {
-    backgroundColor: 'pink',
-    width: '100%',
-    height: '80%',
+    // backgroundColor: 'pink',
+    width: '94%',
+    // height: '80%',
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-around'
   },
   haveAccount:{
     // backgroundColor:'yellow',
@@ -373,8 +385,43 @@ export const signUpStyles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center',
     flexDirection:'row',
-    gap:7
-  }
+    gap:7,
+    // paddingTop:5,
+  },
+  withGoogle:{
+    backgroundColor:'white',
+    borderWidth:1,
+    borderRadius:10,
+    borderColor:'#d5d5d5',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    elevation:2.5
+  },
+  withFacebook:{
+    backgroundColor:'white',
+    borderWidth:1,
+    borderColor:'#d5d5d5',
+    borderRadius:10,
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',    
+    elevation:2.5
+  },
+  withLinkedIn:{
+    backgroundColor:'white',
+    borderWidth:1,
+    borderColor:'#d5d5d5',
+    borderRadius:10,
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    elevation:2.5
+  },
+  withLogo:{
+    width:'70%',
+    height:'70%'
+  },
 });
 
 export default SignUp;
