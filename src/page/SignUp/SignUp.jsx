@@ -191,6 +191,10 @@ const SignUp = () => {
           </View>
           <View style={[signUpStyles.otherOptionLogin]}></View>
         </View>
+        <View style={signUpStyles.haveAccount}>
+          <Text style={{color:'#1c1c1d' , fontWeight:`500`}}>Already have an account ? </Text>
+          <TouchableOpacity><Text style={{color:'purple' , fontWeight:`500`}}>Login</Text></TouchableOpacity>
+        </View>
       </View>
       {/* </ScrollView> */}
       {/* </KeyboardAvoidingView> */}
@@ -329,7 +333,7 @@ export const signUpStyles = StyleSheet.create({
     fontWeight: '500',
   },
   OrWith: {
-    // backgroundColor: 'purple',
+    backgroundColor: 'green',
     width: '100%',
     // height: '16%'
   },
@@ -359,10 +363,18 @@ export const signUpStyles = StyleSheet.create({
   },
 
   otherOptionLogin: {
-    // backgroundColor: 'pink',
+    backgroundColor: 'pink',
     width: '100%',
     height: '80%',
   },
+  haveAccount:{
+    // backgroundColor:'yellow',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    flexDirection:'row',
+    gap:7
+  }
 });
 
 export default SignUp;
