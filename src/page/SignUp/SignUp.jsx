@@ -40,7 +40,7 @@ const SignUp = () => {
 
   return (
     <SafeAreaView style={[signUpStyles.main, {width: WIDTH, height: HEIGHT}]}>
-      <StatusBar animated={false} backgroundColor={'white'} />
+      <StatusBar animated={false} backgroundColor={'white'} barStyle={'dark-content'}/>
 
       <View
         style={[
