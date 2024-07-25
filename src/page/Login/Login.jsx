@@ -184,12 +184,9 @@ export const signUpStyles = StyleSheet.create({
     },
     signUpMain: {
         // backgroundColor:'green',
-        // width:'85%',
-        // height:'85%',
     },
     scrollSignUpMain: {
         // height:HEIGHT,
-        // width:'100%',
     },
     logoMainDiv: {
         // backgroundColor: 'orange',
@@ -207,35 +204,30 @@ export const signUpStyles = StyleSheet.create({
     },
     logo: {
         // backgroundColor: 'pink',
-        resizeMode: 'contain', // Ensures the image scales correctly
+        resizeMode: 'contain', 
     },
     welcome: {
         // backgroundColor: 'brown',
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'center',
-        // paddingTop: 5
     },
     welcomeText: {
         color: '#131314', //black
         fontWeight: '500',
     },
     signUpText: {
-        color: '#4a4a4a', //black gray
+        color: '#4a4a4a', 
     },
     inputForm: {
         // backgroundColor: 'pink',
-        // width: {},
-        // height: '61%',
         paddingVertical: 15,
         display: 'flex',
-        // justifyContent:'center',
         alignItems: 'center',
         gap: 25,
     },
     inputFormGap: {
         // backgroundColor: 'green',
-        // width: '90%',
     },
 
     inputRapDiv: {
